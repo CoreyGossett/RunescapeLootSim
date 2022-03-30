@@ -20,7 +20,7 @@ namespace RunescapeLootSim.Data
 
         public DbSet<Boss> Bosses { get; set; }
         public DbSet<Kill> Kills { get; set; }
-        public DbSet<Item> MyProperty { get; set; }
+        public DbSet<Item> Items { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

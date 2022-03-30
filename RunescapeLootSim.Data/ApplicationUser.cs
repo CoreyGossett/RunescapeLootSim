@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -15,5 +16,8 @@ namespace RunescapeLootSim.Data
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string Name { get; set; }
+        public ICollection<Item> Inventory { get; set; }
     }
 }

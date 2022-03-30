@@ -56,6 +56,9 @@
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Boss.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Kill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
