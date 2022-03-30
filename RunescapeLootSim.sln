@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunescapeLootSim.WebMVC", "RunescapeLootSim.WebMVC\RunescapeLootSim.WebMVC.csproj", "{B964A008-8371-4193-B3DB-EE3DAE17FDB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunescapeLootSim.Data", "RunescapeLootSim.Data\RunescapeLootSim.Data.csproj", "{39903C20-8FBB-4125-9C1B-9F781CBD4E57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunescapeLootSim.Models", "RunescapeLootSim.Models\RunescapeLootSim.Models.csproj", "{B58C7356-B332-4A33-BC1C-8D32A335CDBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunescapeLootSim.Services", "RunescapeLootSim.Services\RunescapeLootSim.Services.csproj", "{64E11C74-083C-4997-91A0-B9CF11121BF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunescapeLootSim.Contracts", "RunescapeLootSim.Contracts\RunescapeLootSim.Contracts.csproj", "{2ADA7759-010B-4509-AE49-83D10A81F3AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunescapeLootSim.Tests", "RunescapeLootSim.Tests\RunescapeLootSim.Tests.csproj", "{E186716D-9DED-4109-8763-757ACD51CF85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B964A008-8371-4193-B3DB-EE3DAE17FDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B964A008-8371-4193-B3DB-EE3DAE17FDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B964A008-8371-4193-B3DB-EE3DAE17FDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B964A008-8371-4193-B3DB-EE3DAE17FDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39903C20-8FBB-4125-9C1B-9F781CBD4E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39903C20-8FBB-4125-9C1B-9F781CBD4E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39903C20-8FBB-4125-9C1B-9F781CBD4E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39903C20-8FBB-4125-9C1B-9F781CBD4E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B58C7356-B332-4A33-BC1C-8D32A335CDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58C7356-B332-4A33-BC1C-8D32A335CDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58C7356-B332-4A33-BC1C-8D32A335CDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58C7356-B332-4A33-BC1C-8D32A335CDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E11C74-083C-4997-91A0-B9CF11121BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E11C74-083C-4997-91A0-B9CF11121BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E11C74-083C-4997-91A0-B9CF11121BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E11C74-083C-4997-91A0-B9CF11121BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADA7759-010B-4509-AE49-83D10A81F3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADA7759-010B-4509-AE49-83D10A81F3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADA7759-010B-4509-AE49-83D10A81F3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADA7759-010B-4509-AE49-83D10A81F3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E186716D-9DED-4109-8763-757ACD51CF85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E186716D-9DED-4109-8763-757ACD51CF85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E186716D-9DED-4109-8763-757ACD51CF85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E186716D-9DED-4109-8763-757ACD51CF85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19FBB5FF-4739-45FC-B9EA-567567B45685}
+	EndGlobalSection
+EndGlobal

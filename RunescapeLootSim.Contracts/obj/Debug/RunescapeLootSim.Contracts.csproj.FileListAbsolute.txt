@@ -1,0 +1,12 @@
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\bin\Debug\RunescapeLootSim.Contracts.dll.config
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\bin\Debug\RunescapeLootSim.Contracts.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\bin\Debug\RunescapeLootSim.Contracts.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\bin\Debug\EntityFramework.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\bin\Debug\EntityFramework.SqlServer.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\bin\Debug\EntityFramework.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\bin\Debug\EntityFramework.SqlServer.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\obj\Debug\RunescapeLootSim.Contracts.csproj.AssemblyReference.cache
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\obj\Debug\RunescapeLootSim.Contracts.csproj.CoreCompileInputs.cache
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\obj\Debug\RunescapeLootSim.Contracts.csproj.CopyComplete
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\obj\Debug\RunescapeLootSim.Contracts.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Contracts\obj\Debug\RunescapeLootSim.Contracts.pdb

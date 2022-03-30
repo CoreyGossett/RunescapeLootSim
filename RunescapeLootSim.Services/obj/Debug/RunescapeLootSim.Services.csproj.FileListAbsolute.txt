@@ -1,0 +1,12 @@
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Services.dll.config
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Services.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Services.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\EntityFramework.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\EntityFramework.SqlServer.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\EntityFramework.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\EntityFramework.SqlServer.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\RunescapeLootSim.Services.csproj.AssemblyReference.cache
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\RunescapeLootSim.Services.csproj.CoreCompileInputs.cache
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\RunescapeLootSim.Services.csproj.CopyComplete
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\RunescapeLootSim.Services.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\RunescapeLootSim.Services.pdb

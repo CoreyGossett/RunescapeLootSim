@@ -1,0 +1,16 @@
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.csproj.AssemblyReference.cache
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.csproj.CoreCompileInputs.cache
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\RunescapeLootSim.Data.dll.config
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\RunescapeLootSim.Data.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\RunescapeLootSim.Data.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\EntityFramework.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\EntityFramework.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.csproj.CopyComplete
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.pdb
