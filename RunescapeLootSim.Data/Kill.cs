@@ -12,9 +12,13 @@ namespace RunescapeLootSim.Data
     {
         [Key]
         public int KillId { get; set; }
-        [ForeignKey("User")]
-        public int UserId { get; set; }
+
+        [ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
+
         [ForeignKey("Boss")]
         public int BossId { get; set; }
+        public virtual Boss Boss { get; set; }
     }
 }

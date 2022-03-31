@@ -18,6 +18,6 @@ namespace RunescapeLootSim.Data
         }
 
         public string Name { get; set; }
-        public ICollection<Item> Inventory { get; set; }
+        public virtual ICollection<Item> Inventory { get; set; }
     }
 }
