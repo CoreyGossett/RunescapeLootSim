@@ -48,13 +48,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BossCreate.cs" />
+    <Compile Include="BossDetail.cs" />
+    <Compile Include="BossEdit.cs" />
+    <Compile Include="BossListItem.cs" />
     <Compile Include="ItemCreate.cs" />
+    <Compile Include="ItemDetail.cs" />
+    <Compile Include="ItemEdit.cs" />
     <Compile Include="ItemListItem.cs" />
+    <Compile Include="KillCreate.cs" />
+    <Compile Include="KillDetail.cs" />
+    <Compile Include="KillEdit.cs" />
+    <Compile Include="KillListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RunescapeLootSim.Data\RunescapeLootSim.Data.csproj">
+      <Project>{39903C20-8FBB-4125-9C1B-9F781CBD4E57}</Project>
+      <Name>RunescapeLootSim.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

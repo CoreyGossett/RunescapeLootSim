@@ -49,6 +49,57 @@ namespace RunescapeLootSim.Services
             }
         }
 
+        public IEnumerable<ItemListItem> GetItems()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Items
+                        .Select(
+                            item =>
+                                new ItemListItem
+                                {
+                                    ItemId = item.ItemId,
+                                    Name = item.Name,
+                                    Damage = item.Damage,
+                                    DropRate = item.DropRate
+                                });
+                return query.ToArray();
+            }
+        }
+
+        public bool UpdateItem(ItemEdit model, string userId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Items
+                        .Single(e => e.ItemId == model.ItemId && userId == model.UserId);
+
+                entity.Name = model.Name;
+                entity.Damage = model.Damage;
+                entity.DropRate = model.DropRate;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteItem(int itemId, string userId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Items
+                        .Single(item => item.ItemId == itemId && userId == item.UserId);
+
+                ctx.Items.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
     }
 }

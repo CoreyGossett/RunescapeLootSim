@@ -10,3 +10,16 @@ D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\Runescape
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\RunescapeLootSim.Services.csproj.CopyComplete
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\RunescapeLootSim.Services.dll
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\obj\Debug\RunescapeLootSim.Services.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Contracts.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Data.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Models.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Contracts.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Contracts.dll.config
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Data.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Data.dll.config
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Models.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\RunescapeLootSim.Models.dll.config
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml

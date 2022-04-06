@@ -10,3 +10,10 @@ D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\obj\Debug\RunescapeLo
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\obj\Debug\RunescapeLootSim.Models.csproj.CopyComplete
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\obj\Debug\RunescapeLootSim.Models.dll
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\obj\Debug\RunescapeLootSim.Models.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\bin\Debug\RunescapeLootSim.Data.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\bin\Debug\RunescapeLootSim.Data.pdb
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\bin\Debug\RunescapeLootSim.Data.dll.config
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
