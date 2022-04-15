@@ -1,4 +1,6 @@
-﻿using RunescapeLootSim.Models;
+﻿using Microsoft.AspNet.Identity;
+using RunescapeLootSim.Models;
+using RunescapeLootSim.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +9,16 @@ using System.Web.Mvc;
 
 namespace RunescapeLootSim.WebMVC.Controllers
 {
-    [Authorize]
     public class ItemController : Controller
     {
         // GET: Item
+        [Authorize]
         public ActionResult Index()
         {
-            var model = new ItemListItem[0];
+            var userId = User.Identity.GetUserId();
+            var service = new ItemService(userId);
+            var model = service.GetItems();
+
             return View(model);
         }
 
@@ -22,15 +27,31 @@ namespace RunescapeLootSim.WebMVC.Controllers
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ItemCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (ModelState.IsValid) return View(model);
 
+            var service = CreateItemService();
+
+            if (service.CreateItem(model))
+            {
+                TempData["SaveResult"] = "Your note was created.";
+                return RedirectToAction("Index");
             }
-            return View();
+
+            ModelState.AddModelError("", "Note could note be created.");
+
+            return View(model);
+        }
+
+        private ItemService CreateItemService()
+        {
+            var userId = User.Identity.GetUserId();
+            var service = new ItemService(userId);
+            return service;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace RunescapeLootSim.Models
         {
             get; set;
         }
-        public int UserId
+        public string UserId
         {
             get; set;
         }

@@ -10,6 +10,13 @@ namespace RunescapeLootSim.Services
 {
     public class ItemService
     {
+        public ItemService(string userId)
+        {
+            UserId = userId;
+        }
+
+        public string UserId { get; }
+
         public bool CreateItem(ItemCreate model)
         {
             var entity =

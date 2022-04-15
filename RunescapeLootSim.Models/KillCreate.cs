@@ -10,6 +10,6 @@ namespace RunescapeLootSim.Models
     {
         public int KillId { get; set; }
         public int BossId { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
     }
 }
