@@ -47,6 +47,39 @@ namespace RunescapeLootSim.WebMVC.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int itemId, ItemEdit model, string userId)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.ItemId != itemId)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateItemService();
+
+            if (service.UpdateItem(model, userId))
+            {
+                TempData["Save Result"] = "Your item was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your item could not be updated.");
+            return View(model);
+        }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(string userId)
+        {
+            var svc = CreateItemService();
+            var model = svc.GetItemsByUser(userId);
+
+            return View(model);
+        }
+
         private ItemService CreateItemService()
         {
             var userId = User.Identity.GetUserId();
