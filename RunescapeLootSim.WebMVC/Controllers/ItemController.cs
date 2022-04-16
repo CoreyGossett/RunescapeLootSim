@@ -71,6 +71,20 @@ namespace RunescapeLootSim.WebMVC.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteItem(int itemId, string userId)
+        {
+            var service = CreateItemService();
+
+            service.DeleteItem(itemId, userId);
+
+            TempData["SaveResult"] = "Your item was deleted.";
+
+            return RedirectToAction("Index");
+        }
+
         [ActionName("Delete")]
         public ActionResult Delete(string userId)
         {
