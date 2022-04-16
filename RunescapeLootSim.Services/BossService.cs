@@ -10,6 +10,13 @@ namespace RunescapeLootSim.Services
 {
     public class BossService
     {
+        public BossService(string userId)
+        {
+            UserId = userId;
+        }
+
+        public string UserId { get; }
+
         public bool CreateBoss(BossCreate model)
         {
             var entity =
@@ -43,6 +50,28 @@ namespace RunescapeLootSim.Services
                                     Damage = boss.Damage,
                                     DropTable = boss.DropTable
                                 });
+                return query.ToArray();
+            }
+        }
+
+        public IEnumerable<BossListItem> GetBossesByUser(string userId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Bosses
+                        .Where(boss => userId == boss.UserId)
+                        .Select(
+                            boss =>
+                                new BossListItem
+                                {
+                                    BossId = boss.BossId,
+                                    Name = boss.Name,
+                                    Damage = boss.Damage,
+                                    DropTable = boss.DropTable
+                                });
+
                 return query.ToArray();
             }
         }
