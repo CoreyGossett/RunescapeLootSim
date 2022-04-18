@@ -10,23 +10,21 @@ namespace RunescapeLootSim.Services
 {
     public class BossService
     {
+        private readonly string _userId;
         public BossService(string userId)
         {
-            UserId = userId;
+            _userId = userId;
         }
-
-        public string UserId { get; }
 
         public bool CreateBoss(BossCreate model)
         {
-            var entity =
-                new Boss()
-                {
-                    UserId = model.UserId,
-                    Name = model.Name,
-                    Damage = model.Damage,
-                    DropTable = model.DropTable
-                };
+                var entity =
+                    new Boss()
+                    {
+                        UserId = _userId,
+                        Name = model.Name,
+                        Damage = model.Damage,
+                    };
 
             using (var ctx = new ApplicationDbContext())
             {
@@ -54,36 +52,34 @@ namespace RunescapeLootSim.Services
             }
         }
 
-        public IEnumerable<BossListItem> GetBossesByUser(string userId)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query =
-                    ctx
-                        .Bosses
-                        .Where(boss => userId == boss.UserId)
-                        .Select(
-                            boss =>
-                                new BossListItem
-                                {
-                                    BossId = boss.BossId,
-                                    Name = boss.Name,
-                                    Damage = boss.Damage,
-                                    DropTable = boss.DropTable
-                                });
-
-                return query.ToArray();
-            }
-        }
-
-        public bool UpdateBoss(BossEdit model, string userId)
+        public BossDetail GetBossById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Bosses
-                        .Single(e => e.BossId == model.BossId && userId == model.UserId);
+                        .SingleOrDefault(e => e.BossId == id && e.UserId == _userId);
+                return
+                        new BossDetail
+                        {
+                            BossId = entity.BossId,
+                            Name = entity.Name,
+                            Damage = entity.Damage,
+                            DropTable = entity.DropTable
+                        };
+
+            }
+        }
+
+        public bool UpdateItem(BossEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Bosses
+                        .Single(e => e.BossId == model.BossId && e.UserId == _userId);
 
                 entity.Name = model.Name;
                 entity.Damage = model.Damage;
@@ -93,14 +89,14 @@ namespace RunescapeLootSim.Services
             }
         }
 
-        public bool DeleteBoss(int bossId, string userId)
+        public bool DeleteBoss(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Bosses
-                        .Single(boss => boss.BossId == bossId && userId == boss.UserId);
+                        .Single(item => item.BossId == id && _userId == item.UserId);
 
                 ctx.Bosses.Remove(entity);
 

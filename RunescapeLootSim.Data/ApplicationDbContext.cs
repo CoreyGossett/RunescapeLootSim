@@ -35,9 +35,6 @@ namespace RunescapeLootSim.Data
         }
     }
 
-
-    
-
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
     {
         public IdentityUserLoginConfiguration()

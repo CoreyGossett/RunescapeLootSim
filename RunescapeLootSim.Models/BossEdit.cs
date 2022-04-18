@@ -9,7 +9,6 @@ namespace RunescapeLootSim.Models
 {
     public class BossEdit
     {
-        public string UserId { get; set; }
         public int BossId { get; set; }
         public string Name { get; set; }
         public virtual ICollection<Item> DropTable { get; set; }

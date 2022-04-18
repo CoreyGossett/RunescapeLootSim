@@ -9,7 +9,6 @@ namespace RunescapeLootSim.Models
 {
     public class ItemCreate
     {
-        public string UserId { get; set; }
 
         [Required]
         public string Name { get; set; }
@@ -17,5 +16,5 @@ namespace RunescapeLootSim.Models
         public int Damage { get; set; }
         [Required]
         public decimal DropRate { get; set; }
-    }
+    }   
 }

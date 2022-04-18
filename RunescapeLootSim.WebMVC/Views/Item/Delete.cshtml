@@ -1,0 +1,56 @@
+﻿@model RunescapeLootSim.Models.ItemDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ItemDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Damage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Damage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DropRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DropRate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

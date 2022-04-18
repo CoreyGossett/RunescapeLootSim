@@ -34,8 +34,6 @@ namespace RunescapeLootSim.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            var userId = User.Identity.GetUserId();
-
             var service = CreateItemService();
 
             if (service.CreateItem(model))
@@ -49,13 +47,37 @@ namespace RunescapeLootSim.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var service = CreateItemService();
+            var model = service.GetItemsById(id);
+
+            return View(model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateItemService();
+            var detail = service.GetItemsById(id);
+            var model =
+                new ItemEdit
+                {
+                    ItemId = detail.ItemId,
+                    Name = detail.Name,
+                    Damage = detail.Damage,
+                    DropRate = detail.DropRate
+                };
+
+            return View(model);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int itemId, ItemEdit model, string userId)
+        public ActionResult Edit(int id, ItemEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.ItemId != itemId)
+            if (model.ItemId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
@@ -63,7 +85,7 @@ namespace RunescapeLootSim.WebMVC.Controllers
 
             var service = CreateItemService();
 
-            if (service.UpdateItem(model, userId))
+            if (service.UpdateItem(model))
             {
                 TempData["Save Result"] = "Your item was updated.";
                 return RedirectToAction("Index");
@@ -76,22 +98,19 @@ namespace RunescapeLootSim.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteItem(int itemId, string userId)
+        public ActionResult DeleteItem(int id)
         {
             var service = CreateItemService();
-
-            service.DeleteItem(itemId, userId);
-
+            service.DeleteItem(id);
             TempData["SaveResult"] = "Your item was deleted.";
-
             return RedirectToAction("Index");
         }
 
         [ActionName("Delete")]
-        public ActionResult Delete(string userId)
+        public ActionResult Delete(int id)
         {
             var svc = CreateItemService();
-            var model = svc.GetItemsByUser(userId);
+            var model = svc.GetItemsById(id);
 
             return View(model);
         }

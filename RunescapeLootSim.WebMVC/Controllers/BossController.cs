@@ -12,6 +12,7 @@ namespace RunescapeLootSim.WebMVC.Controllers
     public class BossController : Controller
     {
         // GET: Boss
+        [Authorize]
         public ActionResult Index()
         {
             var userId = User.Identity.GetUserId();
@@ -46,11 +47,11 @@ namespace RunescapeLootSim.WebMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int bossId, BossEdit model, string userId)
+        public ActionResult Edit(int id, BossEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.BossId != bossId)
+            if (model.BossId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
@@ -58,7 +59,7 @@ namespace RunescapeLootSim.WebMVC.Controllers
 
             var service = CreateBossService();
 
-            if (service.UpdateBoss(model, userId))
+            if (service.UpdateItem(model))
             {
                 TempData["Save Result"] = "Your boss was updated.";
                 return RedirectToAction("Index");
@@ -71,19 +72,16 @@ namespace RunescapeLootSim.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteBoss(int bossId, string userId)
+        public ActionResult DeleteBoss(int id)
         {
             var service = CreateBossService();
-
-            service.DeleteBoss(bossId, userId);
-
+            service.DeleteBoss(id);
             TempData["SaveResult"] = "Your boss was deleted.";
-
             return RedirectToAction("Index");
         }
 
         [ActionName("Delete")]
-        public ActionResult Delete(string userId)
+        public ActionResult Delete(int id)
         {
             var svc = CreateBossService();
             var model = svc.GetBosses();
@@ -98,6 +96,12 @@ namespace RunescapeLootSim.WebMVC.Controllers
             return service;
         }
 
-        
+        public ActionResult Details(int id)
+        {
+            var service = CreateBossService();
+            var model = service.GetBossById(id);
+
+            return View(model);
+        }
     }
 }

@@ -9,7 +9,6 @@ namespace RunescapeLootSim.Models
     public class ItemEdit
     {
         public int ItemId { get; set; }
-        public string UserId { get; set; }
         public string Name { get; set; }
         public int Damage { get; set; }
         public decimal DropRate { get; set; }

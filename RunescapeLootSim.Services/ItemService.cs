@@ -10,19 +10,20 @@ namespace RunescapeLootSim.Services
 {
     public class ItemService
     {
+        private readonly string _userId;
         public ItemService(string userId)
         {
-            UserId = userId;
+            _userId = userId;
         }
 
-        public string UserId { get; }
+        //public string UserId { get; }
 
         public bool CreateItem(ItemCreate model)
         {
             var entity =
                 new Item()
                 {
-                    UserId = model.UserId,
+                    UserId = _userId,
                     Name = model.Name,
                     Damage = model.Damage,
                     DropRate = model.DropRate
@@ -35,24 +36,23 @@ namespace RunescapeLootSim.Services
             }
         }
 
-        public IEnumerable<ItemListItem> GetItemsByUser(string userId)
+        public ItemDetail GetItemsById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                var entity =
                     ctx
                         .Items
-                        .Where(item => userId == item.UserId)
-                        .Select(
-                            item =>
-                                new ItemListItem
+                        .SingleOrDefault(e => e.ItemId == id && e.UserId == _userId);
+                        return
+                                new ItemDetail
                                 {
-                                    ItemId = item.ItemId,
-                                    Name = item.Name,
-                                    Damage = item.Damage,
-                                    DropRate = item.DropRate
-                                });
-                return query.ToArray();
+                                    ItemId = entity.ItemId,
+                                    Name = entity.Name,
+                                    Damage = entity.Damage,
+                                    DropRate = entity.DropRate
+                                };
+                
             }
         }
 
@@ -76,14 +76,14 @@ namespace RunescapeLootSim.Services
             }
         }
 
-        public bool UpdateItem(ItemEdit model, string userId)
+        public bool UpdateItem(ItemEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Items
-                        .Single(e => e.ItemId == model.ItemId && userId == model.UserId);
+                        .Single(e => e.ItemId == model.ItemId && e.UserId == _userId);
 
                 entity.Name = model.Name;
                 entity.Damage = model.Damage;
@@ -93,14 +93,14 @@ namespace RunescapeLootSim.Services
             }
         }
 
-        public bool DeleteItem(int itemId, string userId)
+        public bool DeleteItem(int itemId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Items
-                        .Single(item => item.ItemId == itemId && userId == item.UserId);
+                        .Single(item => item.ItemId == itemId && _userId == item.UserId);
 
                 ctx.Items.Remove(entity);
 
