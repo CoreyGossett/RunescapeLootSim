@@ -245,10 +245,11 @@
     <Content Include="Views\Boss\Create.cshtml" />
     <Content Include="Views\Boss\Edit.cshtml" />
     <Content Include="Views\Boss\Delete.cshtml" />
+    <Content Include="Views\Kill\Create.cshtml" />
+    <Content Include="Views\Kill\Loot.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Kill\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

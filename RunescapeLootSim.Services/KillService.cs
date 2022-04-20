@@ -21,7 +21,7 @@ namespace RunescapeLootSim.Services
             var entity =
                 new Kill()
                 {
-                    UserId = model.UserId,
+                    UserId = _userId,
                     BossId = model.BossId
                 };
 
