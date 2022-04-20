@@ -75,7 +75,11 @@ namespace RunescapeLootSim.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, ItemEdit model)
         {
-            if (!ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Item could not be created. Form invalid.");
+                return View(model);
+            }
 
             if (model.ItemId != id)
             {

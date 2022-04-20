@@ -171,6 +171,7 @@
     <Compile Include="Controllers\BossController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\KillController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -242,9 +243,12 @@
     <Content Include="Views\Item\Delete.cshtml" />
     <Content Include="Views\Boss\Index.cshtml" />
     <Content Include="Views\Boss\Create.cshtml" />
+    <Content Include="Views\Boss\Edit.cshtml" />
+    <Content Include="Views\Boss\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Kill\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -18,13 +18,12 @@ namespace RunescapeLootSim.Services
 
         public bool CreateBoss(BossCreate model)
         {
-                var entity =
-                    new Boss()
-                    {
-                        UserId = _userId,
-                        Name = model.Name,
-                        Damage = model.Damage,
-                    };
+            var entity = new Boss()
+                {
+                    UserId = _userId,
+                    Name = model.Name,
+                    Damage = model.Damage,
+                };
 
             using (var ctx = new ApplicationDbContext())
             {
@@ -44,9 +43,9 @@ namespace RunescapeLootSim.Services
                             boss =>
                                 new BossListItem
                                 {
+                                    BossId = boss.BossId,
                                     Name = boss.Name,
                                     Damage = boss.Damage,
-                                    DropTable = boss.DropTable
                                 });
                 return query.ToArray();
             }
@@ -66,24 +65,22 @@ namespace RunescapeLootSim.Services
                             BossId = entity.BossId,
                             Name = entity.Name,
                             Damage = entity.Damage,
-                            DropTable = entity.DropTable
                         };
 
             }
         }
 
-        public bool UpdateItem(BossEdit model)
+        public bool UpdateBoss(BossEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Bosses
-                        .Single(e => e.BossId == model.BossId && e.UserId == _userId);
+                        .SingleOrDefault(e => e.BossId == model.BossId && e.UserId == _userId);
 
                 entity.Name = model.Name;
                 entity.Damage = model.Damage;
-                entity.DropTable = model.DropTable;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -96,7 +93,7 @@ namespace RunescapeLootSim.Services
                 var entity =
                     ctx
                         .Bosses
-                        .Single(item => item.BossId == id && _userId == item.UserId);
+                        .SingleOrDefault(item => item.BossId == id && _userId == item.UserId);
 
                 ctx.Bosses.Remove(entity);
 

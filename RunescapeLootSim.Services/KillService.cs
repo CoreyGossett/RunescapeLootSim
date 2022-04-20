@@ -10,12 +10,19 @@ namespace RunescapeLootSim.Services
 {
     public class KillService
     {
+        private readonly string _userId;
+        public KillService(string userId)
+        {
+            _userId = userId;
+        }
+
         public bool CreateKill(KillCreate model)
         {
             var entity =
                 new Kill()
                 {
                     UserId = model.UserId,
+                    BossId = model.BossId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -25,48 +32,48 @@ namespace RunescapeLootSim.Services
             }
         }
 
-        public IEnumerable<KillListItem> GetKillsByUser(string userId)
+        public KillDetail GetKillById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Kills
+                        .SingleOrDefault(e => e.KillId == id && e.UserId == _userId);
+                return
+                        new KillDetail
+                        {
+                            KillId = entity.KillId,
+                        };
+
+            }
+        }
+
+        public IEnumerable<KillListItem> GetKills()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .Kills
-                        .Where(kill => userId == kill.UserId)
                         .Select(
                             kill =>
                                 new KillListItem
                                 {
-                                    UserId = kill.UserId,
-                                    BossId = kill.BossId
+                                    KillId = kill.KillId
                                 });
                 return query.ToArray();
             }
         }
 
-        public bool UpdateKill(KillEdit model, string userId)
+        public bool DeleteKill(int killId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Kills
-                        .Single(e => e.KillId == model.KillId && userId == model.UserId);
-
-                entity.BossId = model.BossId;
-
-                return ctx.SaveChanges() == 1;
-            }
-        }
-
-        public bool DeleteKill(int killId, string userId)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                        .Kills
-                        .Single(kill => kill.KillId == killId && userId == kill.UserId);
+                        .Single(item => item.KillId == killId && _userId == item.UserId);
 
                 ctx.Kills.Remove(entity);
 

@@ -59,11 +59,28 @@
     <Compile Include="Boss.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Kill.cs" />
+    <Compile Include="Migrations\202204181826378_InitialCreate.cs" />
+    <Compile Include="Migrations\202204181826378_InitialCreate.Designer.cs">
+      <DependentUpon>202204181826378_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204181943016_OSRS.cs" />
+    <Compile Include="Migrations\202204181943016_OSRS.Designer.cs">
+      <DependentUpon>202204181943016_OSRS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202204181826378_InitialCreate.resx">
+      <DependentUpon>202204181826378_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204181943016_OSRS.resx">
+      <DependentUpon>202204181943016_OSRS.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
