@@ -3,29 +3,27 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Runescape Loot Simulator</h1>
+    <p class="lead">Runescape Loot Simulator is a free to use RPG simulator that allows you to create your own loot and bosses and then allows you to fight those bosses to get the loot you created.</p>
+    <p>@Html.ActionLink("Get Started", "Create", "Item", null, new { @class = "btn btn-primary btn-large" })</p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Make Your Items!</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Here you can click to get started creating your items! Make sure to assign your item a damage and droprate!
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("Create", "Create", "Item", null, new { @class = "btn btn-primary btn-large" })</p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Make Your Boss!</h2>
+        <p>Click here to be able to start creating your bosses to start getting that precious loot!</p>
+        <p>@Html.ActionLink("Create", "Create", "Boss", null, new { @class = "btn btn-primary btn-large"})</p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Track Your Kills</h2>
+        <p>You can easily take a look at the kills you've gotten for a specific boss or all bosses... if that's your thing.'</p>
+        <p>@Html.ActionLink("Track", "Index", "Kill", null, new { @class = "btn btn-primary btn-large" })</p>
     </div>
 </div>
