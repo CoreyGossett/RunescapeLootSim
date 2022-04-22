@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Runescape Loot Simulator</h1>
+    <p class="lead">Runescape Loot Simulator is a free to use RPG simulator that allows you to create your own loot and bosses and then allows you to fight those bosses to get the loot you created.</p>
+    <p>@Html.ActionLink("Get Started", "Create", "Item", null, new { @class = "btn btn-primary btn-large" })</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Make Your Items!</h2>
+        <p>
+            Here you can click to get started creating your items! Make sure to assign your item a damage and droprate!
+        </p>
+        <p>@Html.ActionLink("Create", "Create", "Item", null, new { @class = "btn btn-primary btn-large" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Make Your Boss!</h2>
+        <p>Click here to be able to start creating your bosses to start getting that precious loot!</p>
+        <p>@Html.ActionLink("Create", "Create", "Boss", null, new { @class = "btn btn-primary btn-large"})</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Track Your Kills</h2>
+        <p>You can easily take a look at the kills you've gotten for a specific boss or all bosses... if that's your thing.'</p>
+        <p>@Html.ActionLink("Track", "Index", "Kill", null, new { @class = "btn btn-primary btn-large" })</p>
+    </div>
+</div>

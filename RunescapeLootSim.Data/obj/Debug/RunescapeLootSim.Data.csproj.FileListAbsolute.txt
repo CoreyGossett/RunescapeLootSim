@@ -14,6 +14,5 @@ D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\bin\Debug\Microsoft.Asp
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.csproj.CopyComplete
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.dll
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.pdb
-D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.Migrations.InitialCreate.resources
+D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.Migrations.initCreate.resources
 D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.csproj.GenerateResource.cache
-D:\sd116\RedBadge\RunescapeLootSim\RunescapeLootSim.Data\obj\Debug\RunescapeLootSim.Data.Migrations.OSRS.resources

@@ -10,7 +10,6 @@ namespace RunescapeLootSim.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "RunescapeLootSim.Data.ApplicationDbContext";
         }
 
         protected override void Seed(RunescapeLootSim.Data.ApplicationDbContext context)
