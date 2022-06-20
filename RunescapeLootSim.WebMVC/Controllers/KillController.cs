@@ -23,11 +23,6 @@ namespace RunescapeLootSim.WebMVC.Controllers
 
                 return View();
             }
-           // var userId = User.Identity.GetUserId();
-            //var service = new KillService(userId);
-            //var model = service.GetKills();
-
-            //return View(model);
         }
 
         public ActionResult Loot()
